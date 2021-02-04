@@ -111,7 +111,6 @@ class _BMICalculatorState extends State<BMICalculator> {
               children: [
                 Text('HEIGHT', style: infoStyle,),
                 Row(
-                  textBaseline: TextBaseline.alphabetic,
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   children: [
