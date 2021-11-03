@@ -5,12 +5,12 @@ class DrawButton extends StatelessWidget {
   final Function onTaped;
   final String buttonTitle;
 
-  DrawButton({@required this.buttonTitle, @required this.onTaped});
+  DrawButton({required this.buttonTitle, required this.onTaped});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTaped,
+      onTap: onTaped as void Function()?,
       child: Container(
         child: Center(
           child: Text(buttonTitle,

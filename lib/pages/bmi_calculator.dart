@@ -15,7 +15,7 @@ class BMICalculator extends StatefulWidget {
 }
 
 class _BMICalculatorState extends State<BMICalculator> {
-  Gender gender;
+  Gender? gender;
   int height = 180;
   int weight = 80;
   int age = 20;

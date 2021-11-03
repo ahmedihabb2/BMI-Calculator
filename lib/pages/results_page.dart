@@ -7,7 +7,7 @@ class ResultsPage extends StatelessWidget {
   final String bmiResult;
   final String resultText;
   final String resultInfo;
-  ResultsPage({@required this.bmiResult, @required this.resultInfo, @required this.resultText});
+  ResultsPage({required this.bmiResult, required this.resultInfo, required this.resultText});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
