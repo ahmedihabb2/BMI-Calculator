@@ -45,7 +45,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                         });
                       },
                       child: DrawContainer(
-                        color: gender == Gender.male ? kBackgroundColor : inActiveColor,
+                        color: gender == Gender.male ? backgroundColor : inActiveColor,
                         cardChild: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -72,7 +72,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                         });
                       },
                       child: DrawContainer(
-                        color: gender == Gender.female ? kBackgroundColor : inActiveColor,
+                        color: gender == Gender.female ? backgroundColor : inActiveColor,
                         cardChild: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -96,7 +96,7 @@ class _BMICalculatorState extends State<BMICalculator> {
             ),
             Expanded(
               child: DrawContainer(
-                color: kBackgroundColor,
+                color: backgroundColor,
                 cardChild: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -123,7 +123,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                           height = newVal.toInt();
                         });
                       },
-                      activeColor: kAccentColor,
+                      activeColor: accentColor,
                       inactiveColor: Color(0xFF8D8E98),
                     )
                   ],
@@ -135,7 +135,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                 children: [
                   Expanded(
                     child: DrawContainer(
-                      color: kBackgroundColor,
+                      color: backgroundColor,
                       cardChild: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -197,7 +197,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                   ),
                   Expanded(
                     child: DrawContainer(
-                      color: kBackgroundColor,
+                      color: backgroundColor,
                       cardChild: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -263,12 +263,12 @@ class _BMICalculatorState extends State<BMICalculator> {
             DrawButton(
               buttonTitle: 'CALCULATE',
               onTaped: () {
-                Calculator calc = Calculator(height: height, weight: weight);
+                final calculator = Calculator(height: height, weight: weight);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return ResultsPage(
-                    bmiResult: calc.calculateBMI(),
-                    resultText: calc.getResult(),
-                    resultInfo: calc.getInfo(),
+                    bmiResult: calculator.calculateBMI(),
+                    resultText: calculator.getResult(),
+                    resultInfo: calculator.getInfo(),
                   );
                 }));
               },
